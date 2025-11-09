@@ -1,0 +1,62 @@
+/* Home Page */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px
+}
+header {
+    background-image: ;
+    background-repeat: no-repeat;
+    height: 6.25em;
+    background-size: 250px;
+    background-position: 0px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    box-shadow: 3px 0px 6px rgb(194, 194, 243);
+}
+
+div.header {
+    position: sticky;
+    top: 0%;
+    box-shadow: 3px 0px 12px rgb(194, 194, 243);
+}
+
+/* Navigation Bar */
+
+ul.topnav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(194, 194, 243);
+}
+ul.topnav li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+/* Menu */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item1 { grid-area: box1; background: beige; }
+.item2 { grid-area: box2; background: beige }
+.item3 { grid-area: box3; background: beige }
+.item4 { grid-area: box4; background: beige}
