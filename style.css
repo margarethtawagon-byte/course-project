@@ -1,62 +1,415 @@
-/* Home Page */
-html, body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px
-}
-header {
-    background-image: ;
-    background-repeat: no-repeat;
-    height: 6.25em;
-    background-size: 250px;
-    background-position: 0px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: sticky;
-    top: 0px;
-    box-shadow: 3px 0px 6px rgb(194, 194, 243);
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-div.header {
-    position: sticky;
-    top: 0%;
-    box-shadow: 3px 0px 12px rgb(194, 194, 243);
+header {
+  background-image: url("images/kingfisher.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 65%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  padding: 10px 30px;
+  box-shadow: 3px 0px 6px rgb(194, 194, 243);
+  color: white;
+  z-index: 10;
+}
+
+.header {
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.85),
+    0 0 12px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+  color: #000;
+  font-size: 2.2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  color: #000;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.intro {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.center-image img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+}
+
+.intro iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.footer h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
 }
 
 /* Navigation Bar */
 
-ul.topnav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(194, 194, 243);
-}
-ul.topnav li a {
-    display: block;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
+nav {
+  background-color: rgb(124, 175, 242);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
-ul.topnav li a:hover {
-    background-color: #dddddd;
-    color: black;
+ul.navlist {
+  display: flex;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  list-style-type: none;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgb(124, 175, 242);
 }
 
-/* Menu */
-.grid-container {
+
+ul.navlist li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navlist li a:hover {
+  background-color: rgb(83, 142, 194);
+  color: white
+}
+
+/* Food */
+
+.cafes,
+.restaurants,
+.specials {
   display: grid;
-  grid-template-areas:
-    "box1 box2"
-    "box3 box4";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 250px 250px;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
   padding: 10px;
 }
 
-.item1 { grid-area: box1; background: beige; }
-.item2 { grid-area: box2; background: beige }
-.item3 { grid-area: box3; background: beige }
-.item4 { grid-area: box4; background: beige}
+.cafes>div,
+.restaurants>div,
+.specials>div {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: auto;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.5rem;
+}
+
+.cafes img {
+  width: 100%;
+  height: 200px;
+  margin: 0px;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.restaurants img {
+  width: 100%;
+  height: 200px;
+  margin: px;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.specials img {
+  width: 100%;
+  height: 200px;
+  margin: px;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+
+/* Adventures */
+.beaches,
+.hikes,
+.activities,
+.sights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.beaches>div,
+.hikes>div,
+.activities>div,
+.sights>div {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.beaches img,
+.hikes img,
+.activities img,
+.sights img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.map-container {
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Travel Tips */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1,
+h2,
+h4 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+ul {
+  margin: 10px auto 20px;
+  max-width: 700px;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+
+table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  overflow-wrap: break-word;
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* CSS Animation */
+.css-animation {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 0px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #d38853, #e69933, #e4ae62, #cca366);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: highlighter 2s ease-in-out infinite, moves 4s linear infinite;
+  text-align: center;
+  text-shadow: 0 0 5px #b27b2e, 0 0 10px #e0823f, 0 0 15px #e69933;
+}
+
+@keyframes highlighter {
+
+  0%,
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px #3569e4, 0 0 20px #6292e5, 0 0 30px #5175d6;
+  }
+
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #4771d3, 0 0 40px #5c6fef, 0 0 60px #4f8ce1;
+  }
+}
+
+@keyframes moves {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hook {
+  font-size: 2.5rem;
+  color: rgb(71, 128, 186);
+  text-shadow: #000;
+  font-style: italic;
+}
+
+
+/* Contact */
+.contact-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.contact-container input,
+.contact-container textarea {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.contact-container button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgb(124, 175, 242);
+  border: none;
+  border-radius: 6px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  background-color: rgb(83, 142, 194);
+  color: white;
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .css-animation {
+    font-size: 2.5rem;
+  }
+}
