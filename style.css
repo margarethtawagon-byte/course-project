@@ -224,8 +224,6 @@ ul.navlist li a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  min-height: auto;
-  height: 100%;
   justify-content: flex-start;
 }
 
@@ -344,46 +342,46 @@ table td {
 
 
 /* Contact */
-.contact-container {
-  max-width: 600px;
+.contact {
+  max-width: 650px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-container form {
+.contact form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-container label {
+.contact label {
   margin-top: 10px;
   font-weight: 500;
 }
 
-.contact-container input,
-.contact-container textarea {
+.contact input,
+.contact textarea {
   margin-top: 5px;
-  padding: 10px;
+  padding: 15px;
   font-size: 1rem;
-  border-radius: 12px;
+  border-radius: 15px;
   border: 1px solid black;
 }
 
-.contact-container button {
+.contact button {
   margin-top: 15px;
   padding: 10px;
   background-color: rgb(124, 175, 242);
   border: none;
-  border-radius: 6px;
+  border-radius: 15px;
   color: black;
-  font-weight: bold;
+  font-weight: 550;
   cursor: pointer;
 }
 
-.contact-container button:hover {
+.contact button:hover {
   background-color: rgb(83, 142, 194);
   color: white;
 }
